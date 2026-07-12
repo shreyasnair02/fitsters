@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>"Mean It" — Glitch Options</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;700;800&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --black:#000; --gold:#f2b705; --gold-rgb:242,183,5; --gold-light:#ffd782;
+  --ink:#f5f5f5; --muted:#9a9a9a; --faint:#6f6a60; --outline-variant:#4f4633;
+  --font-display:"Anton","Arial Narrow",sans-serif;
+  --font-body:"Hanken Grotesk",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  background:#000;color:var(--ink);font-family:var(--font-body);
+  -webkit-font-smoothing:antialiased;padding:48px clamp(20px,5vw,64px) 90px;
+}
+.page-head{max-width:760px;margin:0 auto 44px;text-align:center;}
+.page-head .kick{font-weight:700;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);}
+.page-head h1{font-family:var(--font-display);text-transform:uppercase;font-size:clamp(2rem,4vw,2.8rem);letter-spacing:.01em;margin:14px 0 12px;}
+.page-head p{color:var(--muted);line-height:1.6;}
+.page-head b{color:var(--gold-light);font-weight:700;}
+
+.grid{max-width:1180px;margin:0 auto;display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));}
+.card{
+  position:relative;border:1px solid var(--outline-variant);background:#050505;overflow:hidden;
+  min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;
+}
+.card .bg{position:absolute;inset:0;background:url('assets/hero-lion.png') center/cover no-repeat;opacity:.5;}
+.card .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#000 6%,rgba(0,0,0,.45) 48%,rgba(0,0,0,.15) 100%);}
+.card .num{position:absolute;top:16px;left:18px;z-index:3;font-family:var(--font-display);font-size:1.1rem;color:var(--gold);letter-spacing:.04em;}
+.card .name{position:absolute;top:18px;right:18px;z-index:3;font-weight:700;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);}
+.card .stage{position:relative;z-index:2;padding:26px 28px 30px;}
+.card .lead{font-family:var(--font-display);text-transform:uppercase;font-size:clamp(1.8rem,3.2vw,2.6rem);line-height:.98;letter-spacing:-.01em;color:var(--ink);}
+.card .lead em{display:block;font-style:normal;color:var(--gold);}
+.card .replay{margin-top:18px;display:inline-flex;align-items:center;gap:8px;background:none;border:1px solid var(--outline-variant);color:var(--muted);font-family:var(--font-body);font-weight:700;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;padding:8px 14px;cursor:pointer;transition:.2s;}
+.card .replay:hover{border-color:var(--gold);color:var(--gold);}
+
+/* glitch base — uses data-text on the <em> via ::before/::after */
+.g{position:relative;}
+.g::before,.g::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;color:var(--gold);pointer-events:none;}
+
+/* ---------- 1 · RGB DRIFT (subtle chromatic L→R) ---------- */
+.g1::before{color:#ff3b3b;animation:g1r 4.2s steps(1) infinite;mix-blend-mode:screen;}
+.g1::after{color:#23e0ff;animation:g1c 4.2s steps(1) infinite;mix-blend-mode:screen;}
+@keyframes g1r{0%,100%{transform:translate(0,0);opacity:0}88%{transform:translate(0,0);opacity:0}
+  89%{transform:translate(-3px,0);opacity:.9}92%{transform:translate(2px,0);opacity:.9}94%{transform:translate(4px,0);opacity:.9}96%{transform:translate(0,0);opacity:0}}
+@keyframes g1c{0%,100%{transform:translate(0,0);opacity:0}88%{transform:translate(0,0);opacity:0}
+  89%{transform:translate(3px,0);opacity:.8}92%{transform:translate(-2px,0);opacity:.8}94%{transform:translate(-4px,0);opacity:.8}96%{transform:translate(0,0);opacity:0}}
+
+/* ---------- 2 · SLICE SWEEP (horizontal slices tear L→R) ---------- */
+.g2{animation:g2base 5s steps(1) infinite;}
+@keyframes g2base{0%,100%{clip-path:inset(0)}}
+.g2::before{color:var(--gold);animation:g2a 3.4s steps(1) infinite;}
+.g2::after{color:var(--gold);animation:g2b 3.4s steps(1) infinite;}
+@keyframes g2a{0%,100%{transform:translate(0);clip-path:inset(0 0 100% 0)}
+  10%{transform:translate(-8px);clip-path:inset(0 0 82% 0)}12%{transform:translate(6px);clip-path:inset(20% 0 60% 0)}
+  14%{transform:translate(-5px);clip-path:inset(45% 0 35% 0)}16%{transform:translate(7px);clip-path:inset(70% 0 12% 0)}
+  18%{transform:translate(0);clip-path:inset(0 0 100% 0)}}
+@keyframes g2b{0%,100%{transform:translate(0);clip-path:inset(100% 0 0 0)}
+  55%{transform:translate(0);clip-path:inset(100% 0 0 0)}
+  57%{transform:translate(9px);clip-path:inset(12% 0 70% 0)}59%{transform:translate(-7px);clip-path:inset(40% 0 42% 0)}
+  61%{transform:translate(6px);clip-path:inset(66% 0 18% 0)}63%{transform:translate(-9px);clip-path:inset(82% 0 4% 0)}
+  65%{transform:translate(0);clip-path:inset(100% 0 0 0)}}
+
+/* ---------- 3 · DATAMOSH SKEW (jump + ghost trail, drifting right) ---------- */
+.g3{animation:g3main 3.6s cubic-bezier(.6,0,.4,1) infinite;}
+@keyframes g3main{0%,100%{transform:translateX(0) skewX(0)}
+  46%{transform:translateX(0) skewX(0)}48%{transform:translateX(-6px) skewX(-12deg)}
+  50%{transform:translateX(8px) skewX(8deg)}52%{transform:translateX(-3px) skewX(-4deg)}54%{transform:translateX(0) skewX(0)}}
+.g3::before{color:rgba(255,59,59,.8);animation:g3ghost 3.6s cubic-bezier(.6,0,.4,1) infinite;mix-blend-mode:screen;}
+.g3::after{color:rgba(35,224,255,.7);animation:g3ghost2 3.6s cubic-bezier(.6,0,.4,1) infinite;mix-blend-mode:screen;}
+@keyframes g3ghost{0%,46%,100%{transform:translateX(0);opacity:0}48%{transform:translateX(-10px);opacity:.9}52%{transform:translateX(-4px);opacity:.5}54%{opacity:0}}
+@keyframes g3ghost2{0%,46%,100%{transform:translateX(0);opacity:0}48%{transform:translateX(10px);opacity:.8}52%{transform:translateX(5px);opacity:.4}54%{opacity:0}}
+
+/* ---------- 4 · SCAN WIPE (a bright glitch band sweeps L→R) ---------- */
+.g4{position:relative;}
+.g4::before{color:var(--gold-light);clip-path:inset(0 100% 0 0);animation:g4wipe 3.2s linear infinite;text-shadow:0 0 10px rgba(var(--gold-rgb),.7);}
+.g4::after{content:"";width:3px;height:100%;background:rgba(255,255,255,.85);box-shadow:0 0 16px rgba(var(--gold-rgb),.9);left:0;animation:g4bar 3.2s linear infinite;}
+@keyframes g4wipe{0%{clip-path:inset(0 100% 0 0)}24%{clip-path:inset(0 0 0 0)}30%{clip-path:inset(0 0 0 0)}
+  31%{clip-path:inset(0 0 0 8%)}33%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 0 0 0)}}
+@keyframes g4bar{0%{left:-2%;opacity:1}24%{left:100%;opacity:1}25%{opacity:0}100%{opacity:0}}
+
+/* ---------- 5 · MICRO-JITTER (very subtle continuous L↔R shiver + faint ghost) ---------- */
+.g5{animation:g5shake 2.6s steps(1) infinite;}
+@keyframes g5shake{0%,100%{transform:translateX(0)}3%{transform:translateX(-1px)}6%{transform:translateX(1px)}
+  40%{transform:translateX(0)}42%{transform:translateX(-2px)}44%{transform:translateX(1.5px)}46%{transform:translateX(0)}
+  80%{transform:translateX(0)}82%{transform:translateX(-1px)}84%{transform:translateX(1px)}}
+.g5::before{color:rgba(255,59,59,.55);animation:g5gr 2.6s steps(1) infinite;mix-blend-mode:screen;}
+.g5::after{color:rgba(35,224,255,.45);animation:g5gc 2.6s steps(1) infinite;mix-blend-mode:screen;}
+@keyframes g5gr{0%,100%{transform:translateX(-1px);opacity:.35}42%{transform:translateX(-3px);opacity:.7}46%{transform:translateX(-1px);opacity:.35}}
+@keyframes g5gc{0%,100%{transform:translateX(1px);opacity:.3}42%{transform:translateX(3px);opacity:.6}46%{transform:translateX(1px);opacity:.3}}
+
+@media (prefers-reduced-motion:reduce){.g::before,.g::after,.g1,.g2,.g3,.g4,.g5{animation:none!important;}}
+</style>
+</head>
+<body>
+
+<div class="page-head">
+  <span class="kick">Hero Headline · Animation Study</span>
+  <h1>"Mean It" — Glitch Options</h1>
+  <p>Five left-to-right glitch treatments for the gold <b>Mean It</b> line, shown on the lion hero. Tell me which number you like — I'll wire it into the live page. Hit <b>Replay</b> to retrigger any card.</p>
+</div>
+
+<div class="grid" id="grid">
+  <!-- 1 -->
+  <article class="card">
+    <div class="bg"></div>
+    <span class="num">01</span><span class="name">RGB Drift</span>
+    <div class="stage">
+      <div class="lead">Train Like You<em class="g g1" data-text="Mean It">Mean It</em></div>
+      <button class="replay">↻ Replay</button>
+    </div>
+  </article>
+  <!-- 2 -->
+  <article class="card">
+    <div class="bg"></div>
+    <span class="num">02</span><span class="name">Slice Sweep</span>
+    <div class="stage">
+      <div class="lead">Train Like You<em class="g g2" data-text="Mean It">Mean It</em></div>
+      <button class="replay">↻ Replay</button>
+    </div>
+  </article>
+  <!-- 3 -->
+  <article class="card">
+    <div class="bg"></div>
+    <span class="num">03</span><span class="name">Datamosh Skew</span>
+    <div class="stage">
+      <div class="lead">Train Like You<em class="g g3" data-text="Mean It">Mean It</em></div>
+      <button class="replay">↻ Replay</button>
+    </div>
+  </article>
+  <!-- 4 -->
+  <article class="card">
+    <div class="bg"></div>
+    <span class="num">04</span><span class="name">Scan Wipe</span>
+    <div class="stage">
+      <div class="lead">Train Like You<em class="g g4" data-text="Mean It">Mean It</em></div>
+      <button class="replay">↻ Replay</button>
+    </div>
+  </article>
+  <!-- 5 -->
+  <article class="card">
+    <div class="bg"></div>
+    <span class="num">05</span><span class="name">Micro-Jitter</span>
+    <div class="stage">
+      <div class="lead">Train Like You<em class="g g5" data-text="Mean It">Mean It</em></div>
+      <button class="replay">↻ Replay</button>
+    </div>
+  </article>
+</div>
+
+<script>
+document.querySelectorAll('.replay').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var em=btn.closest('.stage').querySelector('.g');
+    var els=[em,em.querySelector? null:null];
+    [em].forEach(function(el){
+      el.style.animation='none';
+      // restart pseudo + main by forcing reflow
+      void el.offsetWidth;
+      el.style.animation='';
+    });
+  });
+});
+</script>
+</body>
+</html>

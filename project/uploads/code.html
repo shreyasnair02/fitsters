@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Equipment &amp; Facilities | FITSTERS ATHLETIC CLUB</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#1b1b1b",
+                    "secondary-container": "#4a4949",
+                    "secondary-fixed": "#e5e2e1",
+                    "secondary-fixed-dim": "#c9c6c5",
+                    "tertiary-container": "#c0c0c0",
+                    "error": "#ffb4ab",
+                    "outline": "#9c8f78",
+                    "outline-variant": "#4f4633",
+                    "on-tertiary": "#303030",
+                    "background": "#121414",
+                    "surface-bright": "#383939",
+                    "inverse-on-surface": "#2f3131",
+                    "on-error": "#690005",
+                    "on-primary-container": "#644a00",
+                    "inverse-primary": "#785900",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "on-primary": "#3f2e00",
+                    "inverse-surface": "#e3e2e2",
+                    "on-surface": "#e3e2e2",
+                    "surface-container-high": "#292a2a",
+                    "primary-container": "#f2b705",
+                    "primary": "#ffd782",
+                    "on-surface-variant": "#d3c5ac",
+                    "primary-fixed": "#ffdf9d",
+                    "surface-dim": "#121414",
+                    "on-secondary-container": "#bab8b7",
+                    "surface-container-highest": "#343535",
+                    "tertiary": "#dcdcdc",
+                    "surface-container": "#1e2020",
+                    "tertiary-fixed-dim": "#c6c6c6",
+                    "surface-tint": "#f9bd14",
+                    "surface": "#121414",
+                    "secondary": "#c9c6c5",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "on-background": "#e3e2e2",
+                    "on-secondary-fixed-variant": "#474646",
+                    "surface-variant": "#343535",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-lowest": "#0d0e0f",
+                    "on-primary-fixed": "#251a00",
+                    "on-primary-fixed-variant": "#5b4300",
+                    "primary-fixed-dim": "#f9bd14",
+                    "tertiary-fixed": "#e2e2e2",
+                    "error-container": "#93000a",
+                    "surface-container-low": "#1a1c1c",
+                    "on-tertiary-container": "#4e4e4e",
+                    "on-secondary": "#313030"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "80px",
+                    "unit": "8px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px",
+                    "stack-md": "48px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "stack-sm": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Anton"],
+                    "headline-lg": ["Anton"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "display-lg": ["Anton"],
+                    "body-md": ["Hanken Grotesk"],
+                    "body-sm": ["Hanken Grotesk"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "headline-sm": ["Anton"],
+                    "display-lg-mobile": ["Anton"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "0.04em", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg": ["80px", {"lineHeight": "84px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                    "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            color: #e3e2e2;
+            -webkit-font-smoothing: antialiased;
+        }
+        .gold-rule {
+            height: 1px;
+            background-color: #f2b705;
+        }
+        .rim-light {
+            border-top: 1px solid #f2b705;
+        }
+        .ghost-border {
+            border: 1px solid #1A1A1A;
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(242, 183, 5, 0.4);
+        }
+        .mask-gradient {
+            background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+        }
+    </style>
+</head>
+<body class="font-body-md overflow-x-hidden">
+<!-- TopNavBar Shell -->
+<nav class="sticky top-0 w-full z-50 bg-background dark:bg-background border-b border-primary-container/20">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md uppercase tracking-tighter text-on-background dark:text-on-background">
+                FITSTERS ATHLETIC CLUB
+            </div>
+<!-- Desktop Links -->
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">CLASSES</a>
+<a class="font-label-caps text-label-caps text-primary dark:text-primary border-b-2 border-primary pb-1" href="#">FACILITIES</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">TRAINERS</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">MEMBERSHIP</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">SCHEDULE</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary-container text-on-primary-fixed px-6 py-3 font-label-caps text-label-caps hover:scale-95 transition-transform active:scale-90">
+                    FREE TRIAL
+                </button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[80vh] flex items-end pb-stack-lg overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="State of the art gym interior" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs72rFlNhNziZoynFY5Z4Md-_hqAqAo_P8yimqh8rVuwYCJ-puX7mGDb7dEpvAJV26HkU4Y1wgIyeQYHq-wgddNLx23Ja2ntA4H8IBQ6CJv3x_ay-dAOT-6iM8L9yFGsEKuvBZG6AmYuwkyG0ZSs2Te9VhUbxxM9AVcGEDLp002FQgYICQ-s-LHZCD4hubI6SDKZVKJzH1ZMU9DnOI3pTC5rENi8_W_tGge7BuMQdvfkM8s13Sv-4o2IPbJiSmE9yFf9maYdPqiw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-3xl">
+<div class="flex items-center gap-4 mb-4">
+<div class="gold-rule w-12"></div>
+<span class="font-label-caps text-label-caps text-primary tracking-widest">WORLD-CLASS ARSENAL</span>
+</div>
+<h1 class="font-display-lg text-display-lg uppercase leading-none mb-6">THE PHYSICS OF PERFORMANCE</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed opacity-80">
+                        Designed for the elite. Our 15,000 sq. ft. sanctuary features curated equipment from Panatta, Hammer Strength, and Life Fitness, set within a cinematic environment that demands focus.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Equipment Bento Grid -->
+<section class="py-stack-lg px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Zone: Strength (Large Featured) -->
+<div class="md:col-span-8 group relative aspect-video md:aspect-auto md:h-[600px] bg-surface-container-lowest overflow-hidden ghost-border rim-light">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70" data-alt="A moody, high-contrast photograph of heavy-duty strength training equipment in a dark, luxury gym. The lighting is dramatic, highlighting the metallic textures of plates and racks against deep shadows. Gold accents from ceiling lights create a warm glow on the sleek black machines. The atmosphere is quiet, intense, and highly exclusive." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOYzqgdzaEoDqdFwS8bpNkgz5D5CcPJ52MEUPxSID1b2Q7zov5S3rq1sYlTX6xaGNhV9abPcPXfayJjE5HOihy9-8MIKANsvuBA0V6mH-a8hj7d_-JGTS8l-9w-g-5TgPfk3xa4DBIqpqOFifwKq-Q5ph6WQuXWIbnu5ao-SWMVaSmGu9l83G6IMUr46sbh_XMR1rTgErcjHopdTU3HUBSL8u4WLzSwGj7avTQRxQzEZTpjBHKzKdBjQl_0HBJr-rUhntcFjLQMA"/>
+<div class="absolute inset-0 mask-gradient p-8 flex flex-col justify-end">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-primary/10 text-primary px-3 py-1 font-label-caps text-[10px] ghost-border">HEAVY METAL</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg uppercase mb-2">STRENGTH DOMAIN</h3>
+<p class="font-body-md text-on-surface-variant max-w-md">Precision-engineered Hammer Strength racks and Panatta plate-loaded series for uncompromising hyper-trophy.</p>
+</div>
+</div>
+<!-- Zone: Cardio (Tall Small) -->
+<div class="md:col-span-4 group relative h-[300px] md:h-auto bg-surface-container-lowest overflow-hidden ghost-border">
+<img alt="Round mirrors with backlighting in the gym" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJWVYYUo7gVwtZjMdcztIeePPaSUVyOpdF0PnjJjdvNPvDcPYM-uy7FpO3JqnjB2aVA5LA5elL9t1M_ErWEFH-aoktgU4_vgNR_rfFa6uLUHTUI2UC5BhKoiA6Lml4NFZJs5Hs52afaHdP_87cPYa9XAVhOUV-VSuH47IbVW1RFSZUEGXAd7tQ8TJGMsOjrP5Dq1-6LZVYa9E9O34VhfnLU6_BVNmnYYx7M2yUI8-ImsSt-4ZtMr96NEbhfjrYiaDphvjeD_wH7g"/>
+<div class="absolute inset-0 mask-gradient p-8 flex flex-col justify-end">
+<h3 class="font-headline-sm text-headline-sm uppercase mb-2">ENDURANCE SUITE</h3>
+<p class="font-body-sm text-on-surface-variant">Technogym Skillrun treadmills and Skillbike experiences integrated with biometric tracking.</p>
+</div>
+</div>
+<!-- Zone: Functional -->
+<div class="md:col-span-4 group relative h-[400px] bg-surface-container-lowest overflow-hidden ghost-border">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70" data-alt="A wide-angle cinematic shot of a functional training zone in a premium athletic club. The floor is covered in high-density black turf with gold line markings. Various equipment like kettlebells, battle ropes, and plyo boxes are arranged neatly. The lighting is low-key, with spotlighting on specific areas to create a sense of focus and drama." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFRoFNH2RBclH7FZtNWX7mElcId8LOiqlpu3nrxqqVPdM9oydAroOPQLgkat5HdLyXpS55MAItD0DWA2BYWQ7XzKKC3ZabQ2u70tsYEsgKH2eY15pzHYOdFaoCnxggSZiN_d9-uE0LkT_Gr_oPy8_fXe8EDkL93c1MzYAB-K3IgHnQPqvInpPt5d3bdj3golpzzkaUrr6l-GfHfRzSjJrSpMwHoyOoNh1GgwWM7S62VqgQLXWWePH8mxbQLGtRNMvREUFXtrtDtQ"/>
+<div class="absolute inset-0 mask-gradient p-8 flex flex-col justify-end">
+<h3 class="font-headline-sm text-headline-sm uppercase mb-2">FUNCTIONAL TURF</h3>
+<p class="font-body-sm text-on-surface-variant">Bespoke turf area equipped with Rogue fitness rigs and Eleiko training sets for dynamic movement.</p>
+</div>
+</div>
+<!-- Zone: Recovery -->
+<div class="md:col-span-8 group relative h-[400px] bg-surface-container-lowest overflow-hidden ghost-border rim-light">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" data-alt="A serene recovery lounge inside an elite athletic club. The space features minimalist architectural design with deep black walls and ambient gold rim lighting. High-end recovery chairs and cryotherapy chambers are visible. The mood is calm and luxurious, emphasizing post-workout restoration and luxury hospitality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjqdaV22QbCsdvddvbo-WMl58FDDgEeX4hDr5wfKf0tnVgf5ktuE1FkjKlPlzH23r0kEJGDlFqImeXUeE78Xyh0dKGqdv6HRHdV79TCtDg_lHfCXDnSmiyQYv0wQVdgU5yfLZGNKHCDfJ8BZKgt_jVZkwSciVOYq7eG3FNGJcDHp1jQj0bxV5_zESpB5G4DqodF9AqznbodNOuIDeNYX8ywOORlTl-ow6jiaQ-460SeSzHzrzrn4M90eHmZCrS5OHZQ3fbu8JcXw"/>
+<div class="absolute inset-0 mask-gradient p-8 flex flex-col justify-end">
+<h3 class="font-headline-lg text-headline-lg uppercase mb-2">RECOVERY LOUNGE</h3>
+<p class="font-body-md text-on-surface-variant max-w-xl">Post-performance restoration featuring Hyperice technology, infrared saunas, and cold plunge therapies.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Spotlight -->
+<section class="bg-surface-container-lowest py-stack-lg border-y border-outline-variant/30">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2">
+<img class="w-full h-[500px] object-cover ghost-border" data-alt="Close-up detail of premium gym equipment texture. Focus on the knurling of a chrome barbell and the grain of a heavy-duty dumbbell. The lighting is stark and dramatic, reflecting off the metallic surfaces. The color palette is strictly deep blacks and metallic silvers with a hint of gold warm light from the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvLWrhGq_LjtwMtVKw8xYg0F-n_0lNYeScqPyiVMFCxSNCMNw9a71tUK8s_smiwlNNaen_z7HVagXT9eMhu9MEUgCuT_Yzq3bNY3AQCTZdHPwYac02s0EmibsxaFXiTXdu6WMrr_hFhfa0n5uwFjMcZXoHKeeDt7KeTlr2-NaKXL6Q9vgY2cyAlmfBsuv_Pzn9x7374FOdNx6u24mcqOKEkKwHyo7iuazQ73N9tUzoCZf3NZaQwQdgHM52Rud-OZ2rvBerTinP9g"/>
+</div>
+<div class="w-full md:w-1/2">
+<span class="font-label-caps text-label-caps text-primary">EDITORIAL HIGHLIGHT</span>
+<h2 class="font-headline-lg text-headline-lg uppercase mb-8 mt-4 leading-tight">CURATED FOR THE DISCERNING ATHLETE</h2>
+<ul class="space-y-6">
+<li class="flex items-start gap-4 border-b border-outline-variant pb-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+<div>
+<h4 class="font-label-caps text-label-caps text-white mb-1">PANATTA ARTISAN LINE</h4>
+<p class="font-body-sm text-on-surface-variant">The pinnacle of biomechanical engineering, designed in Italy with custom leather upholstery.</p>
+</div>
+</li>
+<li class="flex items-start gap-4 border-b border-outline-variant pb-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">monitoring</span>
+<div>
+<h4 class="font-label-caps text-label-caps text-white mb-1">REAL-TIME TELEMETRY</h4>
+<p class="font-body-sm text-on-surface-variant">Every cardio unit syncs with your wearable devices for seamless data integration.</p>
+</div>
+</li>
+<li class="flex items-start gap-4 pb-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<div>
+<h4 class="font-label-caps text-label-caps text-white mb-1">HYGIENE PROTOCOL</h4>
+<p class="font-body-sm text-on-surface-variant">Medical-grade air filtration and hourly antimicrobial surface sterilization.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-stack-lg px-margin-desktop text-center">
+<div class="max-w-3xl mx-auto py-24 ghost-border rim-light relative overflow-hidden bg-surface-container">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<img class="w-full h-full object-cover grayscale" data-alt="A subtle background pattern of an empty, high-end gym floor with dark rubber flooring and minimalist equipment silhouettes. Low opacity and high contrast to create a moody, atmospheric backdrop for a call to action." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW3urn5SnGkx-AsAdgkwJFyi1fgYcdkvzRsuXVOQ0DyDCRPZgOFW-hY2EX3h0Ii2L_GFUJ7Y9c7jL9zCjd4WN3lgyhe89o6ibvtC1T9RgkKcNs645q_3qLrLJ-r6BkGg1RZBUzo9hLsoyIot7ldYe5VhU4BpRYCMNpOUMArm8CobE1AJtJ6NZWIHI7FnYhyqWonIMPAP8RBciEfK0LOVCOc1kvWOabE3zAhqy0slCiWf3lLwOoeLSIyTDp9KGDEIiOO_dg3EijcA"/>
+</div>
+<div class="relative z-10 px-8">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-6">WITNESS THE NEW STANDARD</h2>
+<p class="font-body-lg text-body-lg mb-10 text-on-surface-variant">Private tours available daily. Experience the club's atmosphere before you commit.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary-container text-on-primary-fixed px-10 py-4 font-label-caps text-label-caps tracking-widest hover:scale-95 transition-transform">
+                            BOOK A TOUR
+                        </button>
+<button class="border border-white text-white px-10 py-4 font-label-caps text-label-caps tracking-widest hover:bg-white hover:text-black transition-all">
+                            MEMBERSHIP DETAILS
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-headline-sm text-headline-sm text-primary mb-6">FITSTERS</div>
+<p class="font-body-sm text-on-surface-variant mb-4 opacity-70">Bengaluru's premier athletic destination. Redefining high-performance living.</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-white">RESOURCES</span>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">FAQS</a>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">LOCATION</a>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">CAREERS</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-white">LEGAL</span>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">PRIVACY POLICY</a>
+<a class="font-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">TERMS OF SERVICE</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-white">CONNECT</span>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+<div class="mt-4 text-xs font-label-caps text-on-surface-variant opacity-50 tracking-tighter">
+                    © 2024 FITSTERS ATHLETIC CLUB. ALL RIGHTS RESERVED.
+                </div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', () => btn.classList.add('scale-95'));
+            btn.addEventListener('mouseup', () => btn.classList.remove('scale-95'));
+        });
+
+        // Sticky Navbar behavior
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+                nav.classList.add('bg-black/95', 'backdrop-blur-md');
+            } else {
+                nav.classList.remove('bg-black/95', 'backdrop-blur-md');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body></html>

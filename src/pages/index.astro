@@ -1,0 +1,639 @@
+---
+import "../styles/global.css";
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fitsters Athletic Club — Train Like You Mean It</title>
+<meta name="description" content="Fitsters Athletic Club — Bengaluru's premier athletic destination. State-of-the-art equipment, elite coaching, recovery. Train like you mean it." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,400..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,900;1,6..96,500;1,6..96,600;1,6..96,900&family=Oswald:wght@500;600;700&family=Bebas+Neue&family=Hanken+Grotesk:wght@300;400;500;700;800&family=Rammetto+One&family=Alfa+Slab+One&family=Ultra&family=Passion+One:wght@900&family=Bungee&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0&display=swap" rel="stylesheet" />
+<noscript><style>.intro-veil{display:none!important}html.intro-hold{overflow:auto!important}</style></noscript>
+</head>
+<body>
+
+<!-- ============ INTRO VEIL ============ -->
+<div class="intro-veil" id="introVeil" data-exit="up" data-screen-label="Intro Veil" aria-hidden="true">
+  <div class="iv-panel left"></div><div class="iv-panel right"></div>
+  <canvas class="iv-fx" id="introFx"></canvas>
+  <div class="iv-lockup">
+    <span class="iv-mark"><img class="iv-logo" src="assets/fitsters-logo.png" alt="Fitsters Athletic Club" onerror="this.style.visibility='hidden'" /></span>
+    <span class="iv-kicker">Athletic Club &mdash; Bengaluru</span>
+    <span class="iv-line"><i></i></span>
+  </div>
+</div>
+<script>document.documentElement.classList.add("intro-hold");</script>
+
+<div class="scroll-progress" aria-hidden="true"><i></i></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav nav-v2" id="top">
+  <div class="nav-brand">
+    <a class="nav-logo" href="#top" aria-label="Fitsters Athletic Club home">
+      <span class="logo-badge"><img src="assets/fitsters-logo.png" alt="Fitsters Athletic Club" onerror="this.style.visibility='hidden'" /></span>
+      <span class="brand-lockup">
+        <span class="wordmark-roll" id="wordmark">
+          <span class="wm-track" aria-hidden="true">
+            <span class="wm-line wm-en">Fitsters</span>
+            <span class="wm-line wm-kn">ಫಿಟ್‌ಸ್ಟರ್ಸ್</span>
+          </span>
+        </span>
+        <span class="brand-sub">Athletic Club<i></i>Bengaluru</span>
+      </span>
+    </a>
+  </div>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#environment">Facilities</a>
+    <a href="#trainers">Trainers</a>
+    <a href="#membership">Membership</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="nav-right">
+    <a class="nav-phone" href="tel:+917676317301">+91 76763 17301</a>
+    <a class="btn btn-gold nav-cta" href="#contact">Free Trial</a>
+    <button class="nav-burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" aria-hidden="true">
+  <a href="#environment">Facilities <span>01</span></a>
+  <a href="#trainers">Trainers <span>02</span></a>
+  <a href="#membership">Membership <span>03</span></a>
+  <a href="#contact">Contact <span>04</span></a>
+  <div class="mm-foot">
+    <a class="btn btn-gold btn-block" href="#contact">Start Free Trial</a>
+    <a class="nav-phone" href="tel:+917676317301" style="display:block;color:var(--muted);">+91 76763 17301 · Banaswadi, Bengaluru</a>
+  </div>
+</div>
+
+<!-- ============ MOBILE STICKY ACTION BAR ============ -->
+<div class="m-actionbar" aria-label="Quick actions">
+  <a class="mab-call" href="tel:+917676317301"><span class="material-symbols-outlined">call</span>Call</a>
+  <a class="mab-cta btn btn-gold" href="#contact">Start Free Trial <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero hero-centered" data-hero-title="club" data-hero-font="anton" data-screen-label="Hero">
+  <div class="hero-stage video" id="heroBg" aria-hidden="true">
+    <video class="hero-video" poster="assets/gym-mirrors.png" autoplay loop muted playsinline preload="auto" data-src="assets/gym-loop.mp4" data-src-mobile="assets/hero_720p.mp4"></video>
+    <div class="hero-grade"></div>
+    <div class="hero-vignette"></div>
+  </div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow label-caps reveal">Bengaluru&rsquo;s New Fitness Standard</span>
+    <h1 class="hero-title reveal d1" id="heroTitle" style="text-decoration-line: none;"><em class="glitch" data-text="Fitsters">Fitsters</em> Athletic Club</h1>
+    <p class="hero-sub hero-words reveal d2"><span>Strength</span><i aria-hidden="true"></i><span>Combat</span><i aria-hidden="true"></i><span>Recovery</span></p>
+    <div class="hero-actions reveal d3">
+      <a class="btn btn-gold" href="#contact">Start Free Trial <span class="material-symbols-outlined">arrow_forward</span></a>
+      <a class="btn btn-ghost" href="#membership">Explore Membership</a>
+    </div>
+    <div class="hero-proof reveal d4" aria-label="Rated 4.9 out of 5 by members">
+      <span class="hp-avatars" aria-hidden="true"><i>RD</i><i>AK</i><i>KR</i></span>
+      <span class="hp-score">4.9</span>
+      <span class="hp-stars" aria-hidden="true">★★★★★</span>
+    </div>
+  </div>
+  <div class="hero-grain" aria-hidden="true"></div>
+  <div class="hero-marquee" aria-label="Disciplines offered at Fitsters">
+    <div class="hm-track" aria-hidden="true">
+      <span class="hm-group">
+        <span class="hm-item">Strength Training</span><span class="hm-dot"></span>
+        <span class="hm-item">Kick Boxing</span><span class="hm-dot"></span>
+        <span class="hm-item">Dance Fitness</span><span class="hm-dot"></span>
+        <span class="hm-item">Functional</span><span class="hm-dot"></span>
+        <span class="hm-item">Group Classes</span><span class="hm-dot"></span>
+        <span class="hm-item">Zumba</span><span class="hm-dot"></span>
+        <span class="hm-item">Jiu Jitsu</span><span class="hm-dot"></span>
+        <span class="hm-item">Martial Arts</span><span class="hm-dot"></span>
+      </span>
+      <span class="hm-group">
+        <span class="hm-item">Strength Training</span><span class="hm-dot"></span>
+        <span class="hm-item">Kick Boxing</span><span class="hm-dot"></span>
+        <span class="hm-item">Dance Fitness</span><span class="hm-dot"></span>
+        <span class="hm-item">Functional</span><span class="hm-dot"></span>
+        <span class="hm-item">Group Classes</span><span class="hm-dot"></span>
+        <span class="hm-item">Zumba</span><span class="hm-dot"></span>
+        <span class="hm-item">Jiu Jitsu</span><span class="hm-dot"></span>
+        <span class="hm-item">Martial Arts</span><span class="hm-dot"></span>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CREED + IRON NUMBERS (unified frame) ============ -->
+<section class="creed" data-screen-label="Creed">
+  <div class="creed-bg"><img src="assets/gym-mirrors.png" alt="" aria-hidden="true" /></div>
+  <div class="creed-inner reveal">
+    <span class="eyebrow center label-caps">The Fitsters Creed</span>
+    <h2 class="display-lg slam">Built for the<br /><em>Relentless Few</em></h2>
+  </div>
+  <div class="creed-stats" aria-label="Fitsters by the numbers">
+    <div class="stat reveal">
+      <div class="s-num"><b data-count="15" data-suffix=",000">15,000</b><span class="s-unit">sq ft</span></div>
+      <span class="s-label label-caps">Flagship Performance Floor</span>
+    </div>
+    <div class="stat reveal d1">
+      <div class="s-num"><b data-count="8">8</b></div>
+      <span class="s-label label-caps">Disciplines Under One Roof</span>
+    </div>
+    <div class="stat reveal d2">
+      <div class="s-num"><b data-count="200" data-suffix="+">200+</b><span class="s-unit">5&#9733; reviews</span></div>
+      <span class="s-label label-caps">Rated 4.9 on Google</span>
+    </div>
+    <div class="stat reveal d3">
+      <div class="s-num"><b data-count="0">0</b><span class="s-unit">excuses</span></div>
+      <span class="s-label label-caps">The Only House Rule</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENVIRONMENT (bento) ============ -->
+<section class="section-pad" id="environment" data-screen-label="Facilities">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="h-left reveal">
+        <span class="label-caps">The</span>
+        <h2 class="headline-lg"><span class="gold slam">Environment</span></h2>
+      </div>
+      <p class="h-right body-lg reveal d1">Crafted for focus. Designed for performance. Our 15,000 sq. ft. flagship floor pairs high-performance equipment with luxury-hospitality detailing.</p>
+    </div>
+
+    <div class="bento">
+      <article class="cell cell-8 rim-light reveal">
+        <img src="assets/facility-strength-domain.jpg" alt="The Strength Domain — plate-loaded rigs and free weights at Fitsters" />
+        <div class="cell-mask"></div>
+        <div class="cell-body">
+          <span class="badge">Heavy Metal</span>
+          <h3 class="headline-lg">Strength Domain</h3>
+          <p class="body-md">Plate-loaded rigs, premium free weights and dedicated power racks under signature ring lighting.</p>
+        </div>
+      </article>
+
+      <article class="cell cell-4 reveal d1">
+        <img src="assets/facility-cardio-lab.jpg" alt="The Cardio Lab — treadmills, bikes and rowers" />
+        <div class="cell-mask"></div>
+        <div class="cell-body">
+          <span class="badge">Biometric</span>
+          <h3 class="headline-sm">Cardio Lab</h3>
+          <p class="body-sm">Treadmills, bikes and rowers synced to your wearables for seamless data tracking.</p>
+        </div>
+      </article>
+
+      <article class="cell cell-4-sm reveal">
+        <img src="assets/facility-functional-turf.jpg" alt="The functional turf lane with rigs and sleds" />
+        <div class="cell-mask"></div>
+        <div class="cell-body">
+          <span class="badge">Dynamic</span>
+          <h3 class="headline-sm">Functional Turf</h3>
+          <p class="body-sm">Bespoke turf with rigs, sleds and Eleiko sets for athletic, full-body movement.</p>
+        </div>
+      </article>
+
+      <article class="cell cell-8-sm rim-light reveal d1">
+        <img src="assets/facility-recovery-lounge.png" alt="The Fitsters members' lounge and wall of fame" />
+        <div class="cell-mask"></div>
+        <div class="cell-body">
+          <span class="badge">Restoration</span>
+          <h3 class="headline-lg">Recovery &amp; Lounge</h3>
+          <p class="body-md">Stretch zone, recovery tools and a members' sanctuary built for the hours between sessions.</p>
+        </div>
+      </article>
+
+      <article class="cell cell-8-sm rim-light reveal">
+        <img src="assets/facility-yoga-dance-studio.jpg" alt="The mirrored hardwood yoga and dance studio" />
+        <div class="cell-mask"></div>
+        <div class="cell-body">
+          <span class="badge">Mind &amp; Body</span>
+          <h3 class="headline-lg">Yoga &amp; Dance Studio</h3>
+          <p class="body-md">A warm, mirrored hardwood studio for yoga, dance fitness and movement classes.</p>
+        </div>
+      </article>
+
+      <article class="cell cell-4-sm reveal d1">
+        <img src="assets/facility-engine-room.jpg" alt="The Engine Room conditioning bay" />
+        <div class="cell-mask"></div>
+        <div class="cell-body">
+          <span class="badge">Conditioning</span>
+          <h3 class="headline-sm">The Engine Room</h3>
+          <p class="body-sm">Rowers, sleds, bags and bumper plates — a dedicated conditioning bay built to raise your engine.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KINETIC TYPE — strip 1 ============ -->
+<div class="power-strip" data-dir="1" data-speed="0.55" aria-hidden="true">
+  <div class="ps-track">
+    <span class="ps-group">
+      <span class="ps-word">Strength</span><span class="ps-sep"></span>
+      <span class="ps-word solid">Discipline</span><span class="ps-sep"></span>
+      <span class="ps-word">Power</span><span class="ps-sep"></span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ MASTER THE CRAFT (trainers) ============ -->
+<section class="section-pad" id="trainers" data-screen-label="Trainers">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="h-left reveal">
+        <span class="label-caps">Meet the</span>
+        <h2 class="headline-lg"><span class="gold slam">Squad</span></h2>
+      </div>
+      <p class="h-right body-lg reveal d1">Performance architects, not instructors — every Fitsters coach is certified in advanced biomechanics and athletic nutrition.</p>
+    </div>
+
+    <div class="squad">
+      <article class="coach reveal">
+        <img src="assets/coach-gaurav-singh.jpg" alt="Gaurav Singh — Founder" />
+        <div class="coach-mask"></div>
+        <div class="coach-info">
+          <small>Founder</small>
+          <h3>Gaurav Singh</h3>
+          <p>Personal Trainer · S&amp;C Coach</p>
+        </div>
+      </article>
+      <article class="coach reveal d1">
+        <img src="assets/coach-jyothi-singh.png" alt="Jyothi Singh — Co-Founder" />
+        <div class="coach-mask"></div>
+        <div class="coach-info">
+          <small>Co-Founder</small>
+          <h3>Jyothi Singh</h3>
+          <p>NSCA CSCS, Sports Performance &amp; Rehab, CrossFit L2, AFPA Pre &amp; Postnatal Specialist, 200hrs Yoga TTC</p>
+        </div>
+      </article>
+      <article class="coach reveal d2">
+        <img src="assets/coach-sunny-singh.jpg" alt="Sunny Singh — Coach" />
+        <div class="coach-mask"></div>
+        <div class="coach-info">
+          <small>Coach</small>
+          <h3>Sunny Singh</h3>
+          <p>Fitness Consultant</p>
+        </div>
+      </article>
+      <article class="coach reveal">
+        <img src="assets/coach-rohit-raj.jpg" alt="Rohit Raj — Coach" />
+        <div class="coach-mask"></div>
+        <div class="coach-info">
+          <small>Coach</small>
+          <h3>Rohit Raj</h3>
+          <p>Specialist Strength &amp; Conditioning Coach</p>
+        </div>
+      </article>
+      <article class="coach reveal d1">
+        <img src="assets/coach-emmanuel.jpg" alt="Emmanuel — Coach" />
+        <div class="coach-mask"></div>
+        <div class="coach-info">
+          <small>Coach</small>
+          <h3>Emmanuel</h3>
+          <p>Strength Conditioning &amp; Recovery Specialist</p>
+        </div>
+      </article>
+      <article class="coach reveal d2">
+        <img src="assets/coach-avin-immanuel.jpg" alt="Avin Immanuel — Coach" />
+        <div class="coach-mask"></div>
+        <div class="coach-info">
+          <small>Coach</small>
+          <h3>Avin Immanuel</h3>
+          <p>Fitness Coach</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEMBERSHIP ============ -->
+<section class="section-pad" id="membership" style="background:var(--surface-lowest);border-block:1px solid var(--outline-variant);" data-screen-label="Membership">
+  <div class="wrap">
+    <div class="center-head reveal">
+      <span class="eyebrow center label-caps">Membership</span>
+      <h2 class="headline-lg slam">Choose Your Standard</h2>
+      <p class="body-lg">No lock-ins on your trial. Every tier starts with a free session and a personalised plan.</p>
+    </div>
+
+    <div class="tiers">
+      <article class="tier reveal">
+        <span class="t-flag">Flexible</span>
+        <h3 class="t-name headline-md">Core</h3>
+        <p class="t-desc">Full floor access for the self-driven member.</p>
+        <ul>
+          <li><span class="material-symbols-outlined">check</span>Unlimited gym floor access</li>
+          <li><span class="material-symbols-outlined">check</span>All cardio &amp; strength zones</li>
+          <li><span class="material-symbols-outlined">check</span>Locker &amp; recovery area</li>
+        </ul>
+        <a class="btn btn-ghost btn-block" href="#contact">Book a Free Trial</a>
+      </article>
+
+      <article class="tier feat reveal d1">
+        <span class="t-flag">Most Popular</span>
+        <h3 class="t-name headline-md">Elite</h3>
+        <p class="t-desc">Floor access plus every coached class.</p>
+        <ul>
+          <li><span class="material-symbols-outlined">check</span>Everything in Core</li>
+          <li><span class="material-symbols-outlined">check</span>Unlimited group classes</li>
+          <li><span class="material-symbols-outlined">check</span>Quarterly InBody assessment</li>
+          <li><span class="material-symbols-outlined">check</span>Guest passes (2 / month)</li>
+        </ul>
+        <a class="btn btn-gold btn-block" href="#contact">Book a Free Trial</a>
+      </article>
+
+      <article class="tier reveal d2">
+        <span class="t-flag">Concierge</span>
+        <h3 class="t-name headline-md">Signature</h3>
+        <p class="t-desc">A fully coached, concierge experience.</p>
+        <ul>
+          <li><span class="material-symbols-outlined">check</span>Everything in Elite</li>
+          <li><span class="material-symbols-outlined">check</span>4 personal coaching sessions</li>
+          <li><span class="material-symbols-outlined">check</span>Custom nutrition plan</li>
+          <li><span class="material-symbols-outlined">check</span>Unlimited guest passes</li>
+        </ul>
+        <a class="btn btn-ghost btn-block" href="#contact">Book a Free Trial</a>
+      </article>
+    </div>
+    <p class="tiers-note reveal">For details regarding fees, please visit us or contact us.</p>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section-pad testi" data-screen-label="Testimonials">
+  <div class="wrap">
+    <div class="center-head reveal">
+      <span class="eyebrow center label-caps">Member Stories</span>
+      <h2 class="headline-lg">Trusted by <span class="gold">Bengaluru&rsquo;s Best</span></h2>
+      <p>Verified Google reviews from the floor. Real members, real results, one relentless standard.</p>
+    </div>
+  </div>
+
+  <div class="testi-wall reveal d1" aria-label="Member reviews">
+    <div class="tw-col" data-dir="up">
+      <div class="tw-track">
+        <figure class="tw-card">
+          <span class="tw-stars">★★★★★</span>
+          <blockquote>Easily the best-equipped club in Banaswadi. The coaching is genuinely personal &mdash; I&rsquo;ve never trained this consistently in my life.</blockquote>
+          <figcaption class="tw-by"><span class="tw-av" data-i="RD"></span><span class="tw-meta"><b>Rohan Desai</b><i>Google Review</i></span></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <span class="tw-stars">★★★★★</span>
+          <blockquote>The trainers actually know their craft and push you the right way. I&rsquo;ve seen more progress here in months than years elsewhere.</blockquote>
+          <figcaption class="tw-by"><span class="tw-av" data-i="AM"></span><span class="tw-meta"><b>Aditya M.</b><i>Google Review</i></span></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <span class="tw-stars">★★★★★</span>
+          <blockquote>The strength section is world-class. Plates, racks, platforms &mdash; everything you need and nothing you don&rsquo;t. Never a wait.</blockquote>
+          <figcaption class="tw-by"><span class="tw-av" data-i="AT"></span><span class="tw-meta"><b>Arjun T.</b><i>Google Review</i></span></figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="tw-col" data-dir="down">
+      <div class="tw-track">
+        <figure class="tw-card">
+          <span class="tw-stars">★★★★★</span>
+          <blockquote>Spotless, spacious and never overcrowded. It genuinely feels like a private club, not a gym. Worth every rupee.</blockquote>
+          <figcaption class="tw-by"><span class="tw-av" data-i="AK"></span><span class="tw-meta"><b>Ananya Krishnan</b><i>Google Review</i></span></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <span class="tw-stars">★★★★★</span>
+          <blockquote>From the moment you walk in, everything feels intentional. The recovery floor alone is worth the membership.</blockquote>
+          <figcaption class="tw-by"><span class="tw-av" data-i="MS"></span><span class="tw-meta"><b>Meghana S.</b><i>Google Review</i></span></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <span class="tw-stars">★★★★★</span>
+          <blockquote>Premium, clean and genuinely motivating. It feels like a proper athletic club and the energy on the floor is unmatched.</blockquote>
+          <figcaption class="tw-by"><span class="tw-av" data-i="VN"></span><span class="tw-meta"><b>Vikram N.</b><i>Google Review</i></span></figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="tw-col tw-col-3" data-dir="up">
+      <div class="tw-track">
+        <figure class="tw-card">
+          <span class="tw-stars">★★★★★</span>
+          <blockquote>The free trial sold me in one session. Real coaches, real equipment, real results. Best decision I made this year.</blockquote>
+          <figcaption class="tw-by"><span class="tw-av" data-i="KR"></span><span class="tw-meta"><b>Karthik R.</b><i>Google Review</i></span></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <span class="tw-stars">★★★★★</span>
+          <blockquote>Coaches remember your goals, your form cues, your last session. That level of attention is rare in this city.</blockquote>
+          <figcaption class="tw-by"><span class="tw-av" data-i="DP"></span><span class="tw-meta"><b>Divya P.</b><i>Google Review</i></span></figcaption>
+        </figure>
+        <figure class="tw-card">
+          <span class="tw-stars">★★★★★</span>
+          <blockquote>Best gym in the area by far. The equipment is top-notch and always spotless. I actually look forward to training now.</blockquote>
+          <figcaption class="tw-by"><span class="tw-av" data-i="SR"></span><span class="tw-meta"><b>Sneha R.</b><i>Google Review</i></span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="testi-foot reveal">
+      <p class="go">Go see for yourself.</p>
+      <a class="txtlink" href="https://www.google.com/search?q=Fitsters+Athletic+Club+Reviews" target="_blank" rel="noopener">Read All Client Stories <span class="material-symbols-outlined">arrow_outward</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KINETIC TYPE — strip 2 ============ -->
+<div class="power-strip" data-dir="-1" data-speed="0.5" aria-hidden="true">
+  <div class="ps-track">
+    <span class="ps-group">
+      <span class="ps-word">No Shortcuts</span><span class="ps-sep"></span>
+      <span class="ps-word solid">Earn Your Place</span><span class="ps-sep"></span>
+      <span class="ps-word">Join the Pride</span><span class="ps-sep"></span>
+    </span>
+  </div>
+</div>
+
+<!-- ============ GOLD CTA ============ -->
+<section class="cta-gold" data-screen-label="CTA">
+  <div class="wrap reveal">
+    <span class="eyebrow center label-caps">Your First Session Is On Us</span>
+    <h2 class="display-lg slam">Are You Ready?</h2>
+    <p class="body-lg">Join the elite at Banaswadi. Limited founding memberships available this month — start with a free trial, no commitment.</p>
+    <div class="cta-actions">
+      <a class="btn btn-dark" href="#contact">Claim Your Free Trial <span class="material-symbols-outlined">arrow_forward</span></a>
+      <a class="btn" href="tel:+917676317301" style="border:1px solid rgba(37,26,0,0.45);color:var(--on-gold);">Call the Club</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / BOOKING ============ -->
+<section class="section-pad" id="contact" data-screen-label="Contact">
+  <div class="wrap">
+    <div class="book">
+      <div class="book-info reveal">
+        <span class="eyebrow label-caps">Visit / Book</span>
+        <h2 class="headline-lg slam" style="margin:18px 0 28px;">Come Train<br />With Us</h2>
+
+        <div class="ci-row">
+          <span class="material-symbols-outlined ci-ico">location_on</span>
+          <div>
+            <b class="label-caps">Location</b>
+            <p>1st Floor, Fitsters Athletic Club, 100ft Road,<br />Dodda Banaswadi Main Rd (above Alley Cutz),<br />Annaiah Reddy Layout, Banaswadi, Bengaluru 560043</p>
+          </div>
+        </div>
+        <div class="ci-row">
+          <span class="material-symbols-outlined ci-ico">schedule</span>
+          <div>
+            <b class="label-caps">Hours</b>
+            <p>Mon – Sat &nbsp;5:00 AM – 10:00 PM<br />Sunday &nbsp;7:00 AM – 7:00 PM</p>
+          </div>
+        </div>
+        <div class="ci-row">
+          <span class="material-symbols-outlined ci-ico">call</span>
+          <div>
+            <b class="label-caps">Phone</b>
+            <p><a href="tel:+917676317301">+91 76763 17301</a></p>
+          </div>
+        </div>
+
+        <div class="map">
+          <img src="assets/map-banaswadi.jpg" alt="Map showing Fitsters Athletic Club on 100ft Road, Banaswadi" />
+          <a class="btn btn-ghost open-maps" href="https://www.google.com/maps/search/?api=1&query=Fitsters+Athletic+Club+Banaswadi+Bengaluru" target="_blank" rel="noopener" style="padding:11px 18px;background:rgba(0,0,0,0.5);">Open in Maps <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+      </div>
+
+      <form class="form reveal d1" id="bookForm" novalidate>
+        <div class="form-body">
+          <h3 class="headline-md">Book a Free Trial</h3>
+          <p class="form-sub">No card, no commitment. We'll email you to confirm your slot.</p>
+          <div class="field-row">
+            <div class="field">
+              <label class="label-caps" for="f-name">Full Name</label>
+              <input id="f-name" name="name" type="text" placeholder="Your name" data-required />
+              <span class="err">Please enter your name.</span>
+            </div>
+            <div class="field">
+              <label class="label-caps" for="f-phone">Phone</label>
+              <input id="f-phone" name="phone" type="tel" placeholder="+91 ..." data-required />
+              <span class="err">Enter a valid phone number.</span>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label-caps" for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" placeholder="you@email.com" data-required />
+            <span class="err">Enter a valid email address.</span>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label class="label-caps" for="f-goal">Primary Goal</label>
+              <select id="f-goal" name="goal">
+                <option>Build strength</option>
+                <option>Lose fat / conditioning</option>
+                <option>Athletic performance</option>
+                <option>General fitness</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="label-caps" for="f-time">Preferred Time</label>
+              <select id="f-time" name="time">
+                <option>Early morning (5–8 AM)</option>
+                <option>Daytime (8 AM–5 PM)</option>
+                <option>Evening (5–10 PM)</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label-caps" for="f-msg">Anything we should know? <span style="text-transform:none;letter-spacing:0;color:var(--faint);font-weight:400;">(optional)</span></label>
+            <textarea id="f-msg" name="message" rows="3" placeholder="Injuries, experience level, questions..."></textarea>
+          </div>
+          <button class="btn btn-gold btn-block" type="submit" style="margin-top:6px;">Claim My Free Session <span class="material-symbols-outlined">arrow_forward</span></button>
+        </div>
+        <div class="form-success">
+          <div class="check"><span class="material-symbols-outlined" style="font-size:30px;">check</span></div>
+          <h3 class="headline-md">You're In.</h3>
+          <p class="form-sub" style="margin:0;">Your request has been sent to our team. We'll email you at the address you provided to lock in your free session. See you on the floor.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="f-logo">Fitsters Athletic Club</div>
+        <p>Bengaluru's premier athletic destination. A private training ecosystem for the relentless few.</p>
+        <a class="txtlink" href="#top" style="margin-top:22px;">About Us <span class="material-symbols-outlined">arrow_forward</span></a>
+        <div class="socials" style="margin-top:24px;">
+          <a href="https://www.instagram.com/fitstersclub" target="_blank" rel="noopener" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+          <a href="tel:+917676317301" aria-label="Phone"><span class="material-symbols-outlined">call</span></a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Fitsters+Athletic+Club+Banaswadi+Bengaluru" target="_blank" rel="noopener" aria-label="Directions"><span class="material-symbols-outlined">location_on</span></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="label-caps">Explore</h4>
+        <a href="#environment">Facilities</a>
+            <a href="#trainers">Trainers</a>
+        <a href="#membership">Membership</a>
+      </div>
+      <div class="footer-col">
+        <h4 class="label-caps">Join our Community</h4>
+        <p>Follow the movement and train with the relentless few.</p>
+        <a href="https://www.instagram.com/fitstersclub" target="_blank" rel="noopener">@fitstersclub</a>
+        <a href="https://www.facebook.com/share/1CsGzmPaLv/" target="_blank" rel="noopener">Fitsters on Facebook</a>
+      </div>
+      <div class="footer-col">
+        <h4 class="label-caps">Visit</h4>
+        <p>1st Floor, 100ft Road,<br />Dodda Banaswadi Main Rd,<br />Banaswadi, Bengaluru 560043</p>
+        <a href="tel:+917676317301">+91 76763 17301</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year">2026</span> Fitsters Athletic Club. All rights reserved.</p>
+      <div class="fb-links">
+        <a href="#contact">Free Trial</a>
+        <a href="#membership">Membership</a>
+        <a href="tel:+917676317301">Call</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script is:inline src="/fitsters.js"></script>
+<script>
+/* Robustly start muted background videos (handles blob-src swap in the
+   standalone build and browser autoplay policies). */
+(function () {
+  /* pick the hero source per device — mobile-framed clip on phones,
+     landscape loop on desktop; only the chosen file downloads */
+  (function () {
+    var v = document.querySelector(".hero-video[data-src]");
+    if (!v) return;
+    var isMobile = window.matchMedia("(max-width: 640px)").matches;
+    var src = (isMobile && v.getAttribute("data-src-mobile")) || v.getAttribute("data-src");
+    if (v.getAttribute("src") !== src) { v.setAttribute("src", src); v.load(); }
+  })();
+  function kick() {
+    document.querySelectorAll("video[autoplay]").forEach(function (v) {
+      v.muted = true; v.defaultMuted = true;
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+    });
+  }
+  document.querySelectorAll("video[autoplay]").forEach(function (v) {
+    ["loadeddata", "canplay"].forEach(function (ev) { v.addEventListener(ev, kick); });
+  });
+  window.addEventListener("load", kick);
+  document.addEventListener("visibilitychange", function () { if (!document.hidden) kick(); });
+  window.addEventListener("pointerdown", kick, { once: true });
+  kick();
+})();
+
+/* Brand wordmark rolls between English and Kannada (masked signage roll) */
+(function () {
+  var roll = document.getElementById("wordmark");
+  if (!roll) return;
+  setInterval(function () { roll.classList.toggle("kn"); }, 3800);
+})();
+</script>
+
+</body>
+</html>
