@@ -1,0 +1,20 @@
+services:
+  caddy:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile.web
+    container_name: fitsters-caddy
+    restart: unless-stopped
+    expose:
+      - '80'
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: fitsters-tunnel
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}
+    depends_on:
+      caddy:
+        condition: service_started
