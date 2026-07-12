@@ -9,7 +9,7 @@ REPO_DIR="/opt/fitsters"
 
 echo "==> Deploying to $HOST"
 
-ssh "$HOST" bash -s <<REMOTE
+ssh -o ConnectTimeout=10 "$HOST" bash -s <<REMOTE
 set -euo pipefail
 
 cd $REPO_DIR
