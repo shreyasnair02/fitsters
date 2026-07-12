@@ -540,7 +540,7 @@ section { position: relative; }
   text-transform: uppercase;
 }
 /* long club-name variant (Tweaks → Headline text) — smaller so it holds one line */
-.hero.hero-centered[data-hero-title="club"] .hero-title { font-size: calc(clamp(2.6rem, 6.9vw, 6.4rem) * var(--hero-fs, 1)); }
+.hero.hero-centered[data-hero-title="club"] .hero-title { font-size: calc(clamp(2.3rem, 5.4vw, 4.9rem) * var(--hero-fs, 1)); }
 
 /* display font options (Tweaks → Hero display font) */
 .hero.hero-centered[data-hero-font="anton"] .hero-title { font-family: "Anton", sans-serif; font-stretch: normal; font-weight: 400; line-height: 0.9; letter-spacing: 0.01em; --hero-fs: 0.94; }
@@ -589,11 +589,15 @@ section { position: relative; }
   max-width: none;
 }
 .hero-centered .hero-words span { text-indent: 0.42em; /* optically re-center tracked caps */ }
+/* refined gold diamond separator — small, softly lit */
 .hero-centered .hero-words i {
-  width: 7px; height: 7px;
-  border: 1px solid rgba(var(--gold-rgb), 0.85);
-  border-radius: 50%;
   flex: none;
+  width: 6px; height: 6px;
+  transform: rotate(45deg);
+  background: var(--gold);
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 0 10px rgba(var(--gold-rgb), 0.8), inset 0 0 0 1px rgba(0, 0, 0, 0.25);
 }
 @media (max-width: 560px) {
   .hero-centered .hero-words { gap: 14px; letter-spacing: 0.3em; }
@@ -1565,14 +1569,40 @@ section[id] { scroll-margin-top: 74px; }
   .mobile-menu .mm-foot .btn { padding: 18px 24px; font-size: 0.8rem; }
 
   /* ---- HERO ---- */
-  .hero.hero-centered { min-height: 100vh; min-height: 100svh; padding: 92px 0 122px; }
+  .hero.hero-centered { min-height: 100vh; min-height: 100svh; padding: 84px 0 116px; }
   .hero-inner { padding-inline: var(--pad); }
-  .hero.hero-centered .hero-title { white-space: normal; }
-  .hero .eyebrow { margin-bottom: 20px; font-size: 0.64rem; }
-  .hero-centered .hero-words { flex-wrap: wrap; justify-content: center; row-gap: 10px; }
-  .hero-actions { margin-top: 30px; flex-direction: column; align-items: stretch; width: 100%; gap: 12px; }
-  .hero .btn { width: 100%; padding: 17px 24px; }
-  .hero-centered .hero-proof { margin-top: 22px; flex-wrap: wrap; justify-content: center; }
+
+  /* two-line lockup — FITSTERS over ATHLETIC CLUB, sized to fill the frame */
+  .hero.hero-centered .hero-title,
+  .hero.hero-centered[data-hero-title="club"] .hero-title {
+    white-space: normal;
+    font-size: clamp(2.8rem, 12vw, 3.5rem);
+    line-height: 0.92;
+    letter-spacing: 0.01em;
+    --hero-fs: 1;
+  }
+  .hero.hero-centered .hero-title .glitch { display: block; }
+  .hero.hero-centered .hero-title .ht-club { display: block; }
+  /* soft, contained gold glow — premium, not neon */
+  .hero-title .glitch { text-shadow: 0 0 30px rgba(var(--brand-gold-rgb), 0.28); }
+
+  .hero .eyebrow { margin-bottom: 18px; font-size: 0.64rem; }
+  .hero-centered .hero-words { flex-wrap: wrap; justify-content: center; row-gap: 10px; margin-top: 20px; }
+
+  /* CTAs — one solid primary; secondary demoted to a quiet text link */
+  .hero-actions { margin-top: 26px; flex-direction: column; align-items: stretch; width: 100%; gap: 16px; }
+  .hero .btn-gold { width: 100%; padding: 17px 24px; }
+  .hero .btn-ghost {
+    width: auto; align-self: center;
+    padding: 4px 2px; background: transparent; border: 0;
+    color: var(--gold-light);
+    text-decoration: underline;
+    text-decoration-color: rgba(var(--gold-rgb), 0.55);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 8px;
+  }
+  .hero .btn-ghost:hover, .hero .btn-ghost:active { background: transparent; color: #f4f0e8; }
+  .hero-centered .hero-proof { margin-top: 20px; flex-wrap: wrap; justify-content: center; }
   /* lighter motion + honor the mobile clip's own framing (aspect-matched) */
   .hero-stage.video .hero-video { animation: hero-video-in 1.2s var(--ease) both; transform: none; object-position: 50% 50%; }
 
