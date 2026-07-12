@@ -196,13 +196,9 @@ section { position: relative; }
 .nav.nav-v2.scrolled::after { opacity: 1; }
 .nav-v2 .nav-logo { gap: 15px; }
 .nav-v2 .logo-badge {
-  flex: none; width: 46px; height: 46px; border-radius: 50%; padding: 2px;
-  background: conic-gradient(from 210deg,
-    rgba(var(--gold-rgb), 0.95), rgba(var(--gold-rgb), 0.15) 30%,
-    rgba(var(--gold-rgb), 0.7) 55%, rgba(var(--gold-rgb), 0.1) 78%,
-    rgba(var(--gold-rgb), 0.95));
+  flex: none; width: 46px; height: 46px;
 }
-.nav-v2 .logo-badge img { width: 100%; height: 100%; border-radius: 50%; }
+.nav-v2 .logo-badge img { width: 100%; height: 100%; object-fit: contain; }
 .nav-v2 .brand-lockup { display: flex; flex-direction: column; gap: 4px; }
 .nav-v2 .wordmark-roll { display: block; height: 26px; overflow: hidden; }
 .nav-v2 .wm-track { display: flex; flex-direction: column; transition: transform 0.7s var(--ease); }
@@ -1179,7 +1175,6 @@ html.intro-hold { overflow: hidden; }
 .iv-logo {
   position: relative;
   width: clamp(158px, 34vw, 250px); height: auto;
-  clip-path: circle(49.5% at 50% 50%);
 }
 .iv-word {
   display: flex; overflow: hidden;
